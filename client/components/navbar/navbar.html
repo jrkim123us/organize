@@ -1,16 +1,18 @@
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <md-button><h2>Seminizer</h2></md-button>
-        </div>
-    </md-toolbar>
-    <md-content class="md-padding">
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close Sidenav Left
-        </md-button>
-        <p hide-md show-gt-md>
-            This sidenav is locked open on your device. To go back to the default behavior,
-            narrow your display.
-        </p>
-    </md-content>
-</md-sidenav>
+<div ng-controller="NavbarCtrl">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button ng-href="/"><h2>Seminizer</h2></md-button>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                Close Sidenav Left
+            </md-button>
+            <p hide-md show-gt-md>
+                This sidenav is locked open on your device. To go back to the default behavior,
+                narrow your display.
+            </p>
+        </md-content>
+    </md-sidenav>
+</div>

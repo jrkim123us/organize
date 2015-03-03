@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('organizeApp', [
     'ngCookies',
     'ngResource',
@@ -21,8 +19,8 @@ angular.module('organizeApp', [
     })
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('grey')
-            .accentPalette('red');
+            .primaryPalette('deep-orange')
+            /*.accentPalette('red')*/;
     })
     .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
         return {

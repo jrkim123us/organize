@@ -31,22 +31,11 @@
         <div ng-include="'components/navbar/navbar.html'"></div>
         <section flex>
             <div layout="column" tabindex="-1" role="main">
-                <md-toolbar>
-                    <div class="md-toolbar-tools" ng-click="openMenu()" tabindex="0">
-                        <md-button hide-gt-sm aria-label="Toggle Menu">
-                            <md-icon class="fa fa-fw fa-bars h3" aria-hidden="true"></md-icon>
-                        </md-button>
-                        <div class="md-toolbar-item">
-                            <h3>HOME</h3>
-                        </div>
-                        <span flex></span>
-                        <div class="md-toolbar-item">
-                            <md-button ng-href="/signup">Sign up</md-button>
-                            <md-button ng-href="/login">Login</md-button>
-                        </div>
-                    </div>
-                </md-toolbar>
-                <div ng-view=""></div>
+                <div ng-include="'components/navbar/topbar.html'"></div>
+                <div layout="row">
+                    <div flex="0" flex-gt-md="15"></div>
+                    <div flex="100" flex-gt-md="70" ng-view=""></div>
+                </div>
             </div>
         </section>
 
@@ -89,6 +78,7 @@
                     <script src="components/modal/modal.service.js"></script>
                     <script src="components/mongoose-error/mongoose-error.directive.js"></script>
                     <script src="components/navbar/navbar.controller.js"></script>
+                    <script src="components/navbar/topbar.controller.js"></script>
                     <script src="components/socket/socket.service.js"></script>
                     <!-- endinjector -->
                 <!-- endbuild -->

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('organizeApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    /*$scope.menu = [{
+  .controller('TopbarCtrl', function ($scope, $location, Auth) {
+    $scope.menu = [{
       'title': 'Home',
       'link': '/'
     }];
@@ -19,5 +19,5 @@ angular.module('organizeApp')
 
     $scope.isActive = function(route) {
       return route === $location.path();
-    };*/
+    };
   });
