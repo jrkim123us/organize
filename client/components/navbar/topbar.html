@@ -1,0 +1,31 @@
+<div ng-controller="TopbarCtrl">
+    <md-toolbar>
+        <div class="md-toolbar-tools" ng-click="openMenu()" tabindex="0">
+            <div class="md-toolbar-item">
+                <div layout="row" layout-align="left center">
+                    <md-button hide-gt-sm >
+                        <md-icon class="fa fa-lg fa-fw fa-bars" aria-hidden="true"></md-icon>
+                    </md-button>
+                    <md-button md-no-ink ng-href="">HOME </md-button>
+                </div>
+            </div>
+            <span flex></span>
+            <div class="md-toolbar-item">
+                <div layout="row" layout-align="right center">
+                    <md-button ng-hide="isLoggedIn()" ng-href="/signup"  aria-label="Sign up" title="Sign up">
+                        <md-icon class="fa fa-lg fa-fw fa-user-plus " aria-hidden="true"></md-icon>
+                    </md-button>
+                    <md-button ng-hide="isLoggedIn()" ng-href="/login"  aria-label="Log in" title="Log in">
+                        <md-icon class="fa fa-lg fa-fw fa-sign-in " aria-hidden="true"></md-icon>
+                    </md-button>
+                    <md-button ng-show="isLoggedIn()" ng-href="/settings" aria-label="settings" title="settings">
+                        <md-icon class="fa fa-lg fa-fw fa-cog" aria-hidden="true"></md-icon>
+                    </md-button>
+                    <md-button ng-show="isLoggedIn()" ng-click="logout()" aria-label="Log out" title="Log out">
+                        <md-icon class="fa fa-lg fa-fw fa-sign-out " aria-hidden="true"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+</div>
